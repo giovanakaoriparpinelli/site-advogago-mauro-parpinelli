@@ -60,7 +60,7 @@ include __DIR__ . "/partials/header.php";
       <p class="lede">Atuação em todas as áreas do direito, com destaque para os casos mais comuns em Cornélio Procópio e região.</p>
     </div>
 
-    <div class="areas-grid" style="margin-top:40px;">
+    <div class="grid grid--3" style="margin-top:40px;">
       <?php
       $areas = [
         ["Cível", "Contratos, indenizações, cobranças e disputas patrimoniais, com estratégia clara desde a primeira conversa."],

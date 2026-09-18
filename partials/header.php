@@ -105,16 +105,12 @@ function googleLogo($size = 18) {
         <a href="/jurifacil.php" class="<?php echo $activeNav === 'jurifacil' ? 'is-active' : ''; ?>">Jurifácil</a>
         <a href="/blog/" class="<?php echo $activeNav === 'blog' ? 'is-active' : ''; ?>">Blog</a>
         <a href="/#contato" class="<?php echo $activeNav === 'contato' ? 'is-active' : ''; ?>">Contato</a>
-        <div class="nav__actions">
-          <a class="btn btn--ghost btn--sm" href="https://app.advmauro.com.br/login">
-            Acessar Jurifácil
-          </a>
-          <a class="btn btn--primary btn--sm" target="_blank" rel="noopener"
-             href="<?php echo waLink($whatsappNumber, 'Olá! Gostaria de agendar uma conversa com o Dr. Mauro.'); ?>">
-            Agendar conversa
-          </a>
-        </div>
+        <a href="https://app.advmauro.com.br/login" class="nav__login">Acessar Jurifácil</a>
       </div>
+      <a class="btn btn--primary btn--sm btn--header" target="_blank" rel="noopener"
+         href="<?php echo waLink($whatsappNumber, 'Olá! Gostaria de agendar uma conversa com o Dr. Mauro.'); ?>">
+        Agendar conversa
+      </a>
     </nav>
   </div>
 </header>
