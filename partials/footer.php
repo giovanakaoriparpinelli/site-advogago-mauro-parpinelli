@@ -23,6 +23,7 @@
         <ul class="footer-links">
           <li><a href="tel:+<?php echo $whatsappNumber; ?>"><?php echo $phoneDisplay; ?></a></li>
           <li><a target="_blank" rel="noopener" href="<?php echo waLink($whatsappNumber, 'Olá! Vim pelo site e gostaria de mais informações.'); ?>">WhatsApp</a></li>
+          <li><a href="mailto:<?php echo $contactEmail; ?>"><?php echo $contactEmail; ?></a></li>
         </ul>
       </div>
     </div>

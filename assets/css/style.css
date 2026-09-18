@@ -95,6 +95,10 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .section:last-of-type { border-bottom: none; }
 .section--alt { background: linear-gradient(180deg, transparent, rgba(255,255,255,0.015) 30%, transparent); }
 .section--tight { padding: 64px 0; }
+@media (max-width: 640px) {
+  .section { padding: 64px 0; }
+  .section--tight { padding: 44px 0; }
+}
 
 .eyebrow {
   display: inline-flex;
@@ -179,10 +183,12 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .brand__name small { font-family: var(--font-body); font-size: 0.68rem; color: var(--ink-faint); font-weight: 500; letter-spacing: 0.03em; }
 
 .nav { display: flex; align-items: center; gap: 30px; }
-.nav__links { display: flex; gap: 26px; }
+.nav__links { display: flex; align-items: center; gap: 26px; }
 .nav__links a { font-size: 0.94rem; color: var(--ink-soft); font-weight: 500; transition: color 0.15s; }
 .nav__links a:hover { color: var(--ink); }
 .nav__links a.is-active { color: var(--accent-2); }
+
+.nav__actions { display: flex; align-items: center; gap: 10px; }
 
 .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav__toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 5px 0; transition: 0.2s; }
@@ -193,8 +199,10 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
     inset: 78px 0 0 0;
     background: var(--bg-elevated);
     flex-direction: column;
+    align-items: stretch;
     padding: 32px 24px;
     gap: 22px;
+    overflow-y: auto;
     transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
@@ -203,7 +211,15 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .nav__links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .nav__links a { font-size: 1.1rem; }
   .nav__toggle { display: block; }
-  .nav .btn--primary.btn--header { display: none; }
+  .nav__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .nav__actions .btn { justify-content: center; font-size: 1rem; padding: 14px 24px; }
 }
 
 /* ---------- Hero ---------- */
@@ -434,6 +450,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 640px) {
+  .jurifacil-teaser { padding: 30px 24px; border-radius: 18px; }
 }
 .jurifacil-teaser::before {
   content: "";

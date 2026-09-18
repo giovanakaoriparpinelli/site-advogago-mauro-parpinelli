@@ -3,6 +3,7 @@ $siteName = "Advocacia Mauro Jr Parpinelli";
 $siteUrl  = "https://advmauro.com.br";
 $phoneDisplay = "(43) 99636-4940";
 $whatsappNumber = "5543996364940";
+$contactEmail = "maurojrparpinelli.adv@gmail.com";
 $address = "Rua Colombo, 560, Centro, Cornélio Procópio/PR";
 $oab = "OAB/PR 84.908";
 
@@ -20,6 +21,7 @@ function icon($name) {
     "scale" => '<path d="M12 3v3"/><path d="M5 8h14"/><path d="M7 8l-3.5 7a3.5 3.5 0 0 0 7 0L7 8Z"/><path d="M17 8l-3.5 7a3.5 3.5 0 0 0 7 0L17 8Z"/><circle cx="12" cy="4.5" r="1.5"/><path d="M6 21h12"/>',
     "pin"   => '<path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/>',
     "phone" => '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>',
+    "mail"  => '<path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 6-10 7L2 6"/>',
   ];
   $path = $icons[$name] ?? "";
   return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $path . '</svg>';
@@ -63,6 +65,7 @@ function googleLogo($size = 18) {
   "name": "<?php echo $siteName; ?>",
   "url": "<?php echo $siteUrl; ?>",
   "telephone": "+<?php echo $whatsappNumber; ?>",
+  "email": "<?php echo $contactEmail; ?>",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Colombo, 560, Centro",
@@ -102,11 +105,16 @@ function googleLogo($size = 18) {
         <a href="/jurifacil.php" class="<?php echo $activeNav === 'jurifacil' ? 'is-active' : ''; ?>">Jurifácil</a>
         <a href="/blog/" class="<?php echo $activeNav === 'blog' ? 'is-active' : ''; ?>">Blog</a>
         <a href="/#contato" class="<?php echo $activeNav === 'contato' ? 'is-active' : ''; ?>">Contato</a>
+        <div class="nav__actions">
+          <a class="btn btn--ghost btn--sm" href="https://app.advmauro.com.br/login">
+            Acessar Jurifácil
+          </a>
+          <a class="btn btn--primary btn--sm" target="_blank" rel="noopener"
+             href="<?php echo waLink($whatsappNumber, 'Olá! Gostaria de agendar uma conversa com o Dr. Mauro.'); ?>">
+            Agendar conversa
+          </a>
+        </div>
       </div>
-      <a class="btn btn--primary btn--sm btn--header" target="_blank" rel="noopener"
-         href="<?php echo waLink($whatsappNumber, 'Olá! Gostaria de agendar uma conversa com o Dr. Mauro.'); ?>">
-        Agendar conversa
-      </a>
     </nav>
   </div>
 </header>

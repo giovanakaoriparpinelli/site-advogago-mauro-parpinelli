@@ -199,6 +199,13 @@ include __DIR__ . "/partials/header.php";
           </div>
         </div>
         <div class="contact-item">
+          <div class="contact-item__icon"><?php echo icon('mail'); ?></div>
+          <div>
+            <strong>E-mail</strong><br>
+            <a href="mailto:<?php echo $contactEmail; ?>"><?php echo $contactEmail; ?></a>
+          </div>
+        </div>
+        <div class="contact-item">
           <div class="contact-item__icon"><?php echo icon('pin'); ?></div>
           <div>
             <strong>Endereço</strong><br>
